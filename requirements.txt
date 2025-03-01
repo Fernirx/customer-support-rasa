@@ -1,0 +1,4 @@
+rasa
+sentry-sdk==1.14.0
+structlog-sentry==2.0.2
+cryptography==41.0.7
