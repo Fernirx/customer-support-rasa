@@ -1,91 +1,134 @@
 version: "3.1"
-
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet_vi
+    examples: |
+      - xin chào
+      - chào bạn
+      - chào chatbot
+      - chào cậu
+      - chào
+      - chào buổi sáng
+      - chào buổi chiều
+      - chào buổi tối
+      - xin chào bạn ạ
+      - chào mọi người
+      - chào ngày mới
+      - chào buổi trưa
+      - chào buổi xế chiều
+      - chào đêm
+      - chào nhóm
+      - xin chào cả nhà
+      - hey chào
+      - xin chào đội
+      - chào cả team
+      - chào tất cả
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: greet_en
+    examples: |
+      - hello
+      - hi
+      - hey
+      - good morning
+      - good afternoon
+      - good evening
+      - hey there
+      - howdy
+      - hi chatbot
+      - hello there
+      - hi team
+      - hello everyone
+      - greetings
+      - what’s up
+      - yo
+      - hey folks
+      - hi all
+      - hey guys
+      - hiya
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: goodbye_vi
+    examples: |
+      - tạm biệt
+      - hẹn gặp lại
+      - hẹn gặp bạn sau
+      - chào tạm biệt
+      - bye bạn
+      - tạm biệt nhé
+      - bye bye
+      - chào nhé
+      - tạm biệt cả nhà
+      - đi đây
+      - mình đi trước
+      - hẹn lại
+      - hẹn bạn lần sau
+      - chúc bạn một ngày tốt lành
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: goodbye_en
+    examples: |
+      - goodbye
+      - bye
+      - see you
+      - see you later
+      - see you soon
+      - talk to you later
+      - farewell
+      - bye everyone
+      - catch you later
+      - take care
+      - cheers
+      - see ya
+      - cya
+      - later
+      - adios
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: ask_help_vi
+    examples: |
+      - tôi cần giúp đỡ
+      - làm ơn hỗ trợ tôi
+      - cần được trợ giúp
+      - tôi cần trợ giúp
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: ask_help_en
+    examples: |
+      - how can you assist me
+      - need help
+      - please help me
+      - help me please
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: nlu_fallback
+    examples: |
+      # Vietnamese nonsensical input
+      - lỗi hệ thống
+      - bậy bạ
+      - ggghhh
+      - kjhgfdfghj
+
+      # English nonsensical input
+      - asdjkhask
+      - 123123
+      - ???
+      - dsaflkj23#@
+      - !!!!!
+      - qwertyuiop
+      - zxcvbnm
+      - hello???123
+      - @#$%^&*
+      - nonsensical input
+      - lorem ipsum
+      - blahblah
+      - random text
+      - 🤖👾
+      - sdfghjkl;'\n
+      - // test
+      - <<>>
+      - こんにちは???
+      - *&^%$#@!
+      - 你好???
+      - wuwuwu
+      - hahahaha
+      - hihihihi
+      - qqqqq
+      - wwwww
+      - 你好世界123
+      - testing fallback
+      - test
+      - ???!!!???

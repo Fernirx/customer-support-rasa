@@ -1,13 +1,37 @@
 version: "3.1"
 
 rules:
+  - rule: Greet in Vietnamese
+    steps:
+      - intent: greet_vi
+      - action: utter_greet_vi
 
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: Greet in English
+    steps:
+      - intent: greet_en
+      - action: utter_greet_en
 
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - rule: Goodbye in Vietnamese
+    steps:
+      - intent: goodbye_vi
+      - action: utter_goodbye_vi
+
+  - rule: Goodbye in English
+    steps:
+      - intent: goodbye_en
+      - action: utter_goodbye_en
+
+  - rule: Help in Vietnamese
+    steps:
+      - intent: ask_help_vi
+      - action: utter_help_vi
+
+  - rule: Help in English
+    steps:
+      - intent: ask_help_en
+      - action: utter_help_en
+
+  - rule: Handle fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_default_fallback

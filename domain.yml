@@ -1,33 +1,33 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - greet_vi
+  - greet_en
+  - goodbye_vi
+  - goodbye_en
+  - ask_help_vi
+  - ask_help_en
+  - nlu_fallback  # Thêm intent fallback để xử lý khi bot không hiểu
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_greet_vi:
+    - text: "Xin chào! Mình có thể giúp gì cho bạn?"
+  utter_greet_en:
+    - text: "Hello! How can I assist you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_goodbye_vi:
+    - text: "Tạm biệt! Chúc bạn một ngày tuyệt vời!"
+  utter_goodbye_en:
+    - text: "Goodbye! Have a great day!"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_help_vi:
+    - text: "Bạn cần mình hỗ trợ vấn đề gì?"
+  utter_help_en:
+    - text: "What do you need help with?"
 
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_default_fallback:
+    - text: "Xin lỗi, mình không hiểu. Bạn có thể nói lại được không?"  # Tiếng Việt
+    - text: "Sorry, I didn't understand. Could you please repeat?"  # Tiếng Anh
 
 session_config:
   session_expiration_time: 60
