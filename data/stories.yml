@@ -97,4 +97,9 @@ stories:
     steps:
       - intent: nlu_fallback
       - action: utter_default_fallback
+      
+  - story: Search flight with full info
+    steps:
+      - intent: search_flight
+      - action: action_search_flight
 

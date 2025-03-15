@@ -35,3 +35,8 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: utter_default_fallback
+
+  - rule: Flight search
+    steps:
+      - intent: search_flight
+      - action: action_search_flight

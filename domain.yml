@@ -8,6 +8,62 @@ intents:
   - ask_help_vi
   - ask_help_en
   - nlu_fallback  # Thêm intent fallback để xử lý khi bot không hiểu
+  - search_flight
+
+entities:
+  - number_children
+  - number_adults
+  - number_infants
+  - ticket_class
+  - departure_date
+  - departure_city
+  - arrival_city
+
+slots:
+  departure_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: departure_city
+  arrival_city:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: arrival_city
+  departure_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: departure_date
+  ticket_class:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ticket_class
+      - type: from_intent
+        intent: search_flight
+        value: "economy"
+  number_adults:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: number_adults
+      - type: from_entity
+        entity: number
+  number_children:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: number_children
+      - type: from_entity
+        entity: number
+  number_infants:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: number_infants
+      - type: from_entity
+        entity: number
 
 responses:
   utter_greet_vi:
@@ -28,6 +84,26 @@ responses:
   utter_default_fallback:
     - text: "Xin lỗi, mình không hiểu. Bạn có thể nói lại được không?"  # Tiếng Việt
     - text: "Sorry, I didn't understand. Could you please repeat?"  # Tiếng Anh
+
+  utter_ask_departure_city:
+    - text: "Bạn muốn đi từ thành phố nào?"
+  utter_ask_arrival_city:
+    - text: "Bạn muốn đến thành phố nào?"
+  utter_ask_departure_date:
+    - text: "Bạn muốn đi vào ngày nào?"
+  utter_ask_ticket_class:
+    - text: "Bạn muốn hạng vé nào? (phổ thông/economy, thương gia/business, hạng nhất/first class)"
+  utter_ask_number_adults:
+    - text: "Bao nhiêu người lớn?"
+  utter_ask_number_children:
+    - text: "Bao nhiêu trẻ em?"
+  utter_ask_number_infants:
+    - text: "Bao nhiêu em bé?"
+  utter_flight_result:
+    - text: "{flight_info}"
+
+actions:
+  - action_search_flight
 
 session_config:
   session_expiration_time: 60
