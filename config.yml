@@ -1,30 +1,37 @@
-# config.yml
-
 language: "en"
 
 pipeline:
   - name: WhitespaceTokenizer
+  - name: my_components.remove_duplicates.RemoveDuplicateTokens
   - name: RegexFeaturizer
   - name: RegexEntityExtractor
-    use_lookup_tables: true
     use_regexes: true
+    use_lookup_tables: true
+  - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
   - name: DIETClassifier
-    epochs: 100
+    epochs: 500
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 300
+    epochs: 500
   - name: FallbackClassifier
     threshold: 0.5
     ambiguity_threshold: 0.2
   - name: DucklingEntityExtractor
-    dimensions: ["number"]
+    dimensions:
+      - number
 
 policies:
   - name: RulePolicy
-    core_fallback_action_name: "utter_default_fallback"  # Sử dụng utter_* thay vì action_*
+    core_fallback_action_name: "utter_default_fallback"
     core_fallback_threshold: 0.4
-    max_predictions: 5  # Giới hạn số lần fallback
+    max_predictions: 5
   - name: TEDPolicy
     max_history: 5
+
 assistant_id: 20250513-215700-ragged-yard
+

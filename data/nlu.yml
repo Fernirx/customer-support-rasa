@@ -94,6 +94,259 @@ nlu:
       - please help me
       - help me please
 
+  - lookup: departure_city
+    examples: |
+      - Hà Nội
+      - TP Hồ Chí Minh
+      - Hải Phòng
+      - Đà Nẵng
+      - Cần Thơ
+      - An Giang
+      - Bà Rịa - Vũng Tàu
+      - Bắc Giang
+      - Bắc Kạn
+      - Bạc Liêu
+      - Bắc Ninh
+      - Bến Tre
+      - Bình Định
+      - Bình Dương
+      - Bình Phước
+      - Bình Thuận
+      - Cà Mau
+      - Cao Bằng
+      - Đắk Lắk
+      - Đắk Nông
+      - Điện Biên
+      - Đồng Nai
+      - Đồng Tháp
+      - Gia Lai
+      - Hà Giang
+      - Hà Nam
+      - Hà Tĩnh
+      - Hải Dương
+      - Hậu Giang
+      - Hòa Bình
+      - Hưng Yên
+      - Khánh Hòa
+      - Kiên Giang
+      - Kon Tum
+      - Lai Châu
+      - Lâm Đồng
+      - Lạng Sơn
+      - Lào Cai
+      - Long An
+      - Nam Định
+      - Nghệ An
+      - Ninh Bình
+      - Ninh Thuận
+      - Phú Thọ
+      - Phú Yên
+      - Quảng Bình
+      - Quảng Nam
+      - Quảng Ngãi
+      - Quảng Ninh
+      - Quảng Trị
+      - Sóc Trăng
+      - Sơn La
+      - Tây Ninh
+      - Thái Bình
+      - Thái Nguyên
+      - Thanh Hóa
+      - Thừa Thiên Huế
+      - Tiền Giang
+      - Trà Vinh
+      - Tuyên Quang
+      - Vĩnh Long
+      - Vĩnh Phúc
+      - Yên Bái
+
+  - lookup: arrival_city
+    examples: |
+      - Hà Nội
+      - TP Hồ Chí Minh
+      - Hải Phòng
+      - Đà Nẵng
+      - Cần Thơ
+      - An Giang
+      - Bà Rịa - Vũng Tàu
+      - Bắc Giang
+      - Bắc Kạn
+      - Bạc Liêu
+      - Bắc Ninh
+      - Bến Tre
+      - Bình Định
+      - Bình Dương
+      - Bình Phước
+      - Bình Thuận
+      - Cà Mau
+      - Cao Bằng
+      - Đắk Lắk
+      - Đắk Nông
+      - Điện Biên
+      - Đồng Nai
+      - Đồng Tháp
+      - Gia Lai
+      - Hà Giang
+      - Hà Nam
+      - Hà Tĩnh
+      - Hải Dương
+      - Hậu Giang
+      - Hòa Bình
+      - Hưng Yên
+      - Khánh Hòa
+      - Kiên Giang
+      - Kon Tum
+      - Lai Châu
+      - Lâm Đồng
+      - Lạng Sơn
+      - Lào Cai
+      - Long An
+      - Nam Định
+      - Nghệ An
+      - Ninh Bình
+      - Ninh Thuận
+      - Phú Thọ
+      - Phú Yên
+      - Quảng Bình
+      - Quảng Nam
+      - Quảng Ngãi
+      - Quảng Ninh
+      - Quảng Trị
+      - Sóc Trăng
+      - Sơn La
+      - Tây Ninh
+      - Thái Bình
+      - Thái Nguyên
+      - Thanh Hóa
+      - Thừa Thiên Huế
+      - Tiền Giang
+      - Trà Vinh
+      - Tuyên Quang
+      - Vĩnh Long
+      - Vĩnh Phúc
+      - Yên Bái
+
+  - intent: search_flight
+    examples: |
+      # Hỏi cơ bản
+      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city)
+      - Tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city)
+      - Tìm chuyến bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city)
+      - Đặt vé máy bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city)
+      - Đặt vé bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Đặt vé bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city)
+      - Đặt vé bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city)
+      - Đặt vé bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city)
+
+      - Tìm chuyến từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [TP.HCM](arrival_city)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city)
+      - Đặt vé từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city)
+      - Đặt vé từ [Hà Nội](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+      - Đặt vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Đặt vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+      
+      # Hỏi ngắn gọn
+      - Từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city)
+      - Từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city)
+      - Từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city)
+      - Vé từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city)
+      - Vé từ [Hà Nội](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+      - Vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - Vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+      - [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
+      - [TP.HCM](departure_city) đến [Hà Nội](arrival_city)
+      - [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city)
+      - [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city)
+
+      # Hỏi văn phong
+      - Có thể cho mình biết chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) không?
+      - Bạn có thể tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) có được không?
+      - Mình muốn tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city)
+      - Mình cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+      - Hiện tại tui cần tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) gấp
+      - Bạn có thể giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) không?
+      - Mình đang cần tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city)
+      - Mình cần tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) nhanh chóng
+      - Hãy giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city)
+
+      # Hỏi cơ bản với ngày
+      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date)
+      - Tìm chuyến bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [21/05/2025](departure_date)
+      - Tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [22/05/2025](departure_date)
+      - Tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [23/05/2025](departure_date)
+      - Tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [24/05/2025](departure_date)
+      - Tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [25/05/2025](departure_date)
+      - Tìm chuyến bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city) ngày [26/05/2025](departure_date)
+      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [27/05/2025](departure_date)
+      - Đặt vé máy bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city) ngày [28/05/2025](departure_date)
+      - Đặt vé máy bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [29/05/2025](departure_date)
+      - Đặt vé bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [30/05/2025](departure_date)
+      - Đặt vé bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [31/05/2025](departure_date)
+      - Đặt vé bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [01/06/2025](departure_date)
+      - Đặt vé bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [02/06/2025](departure_date)
+      - Đặt vé bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [03/06/2025](departure_date)
+      - Đặt vé bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [04/06/2025](departure_date)
+      - Đặt vé bay từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city) ngày [05/06/2025](departure_date)
+      - Đặt vé bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [06/06/2025](departure_date)
+
+      - Tìm chuyến từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [21/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [22/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [23/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [TP.HCM](arrival_city) ngày [24/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [25/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [26/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [27/05/2025](departure_date)
+      - Đặt vé từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [28/05/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [29/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [30/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [31/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [01/06/2025](departure_date)
+      - Đặt vé từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [02/06/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [03/06/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city) ngày [04/06/2025](departure_date)
+
+      # Hỏi ngắn gọn với ngày
+      - Tìm chuyến từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [21/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [22/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [23/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [TP.HCM](arrival_city) ngày [24/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [25/05/2025](departure_date)
+      - Tìm chuyến từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [26/05/2025](departure_date)
+      - Tìm chuyến từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [27/05/2025](departure_date)
+      - Đặt vé từ [Bà Rịa – Vũng Tàu](departure_city) đi [Hà Nội](arrival_city) ngày [28/05/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [29/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [30/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [31/05/2025](departure_date)
+      - Đặt vé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [01/06/2025](departure_date)
+      - Đặt vé từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [02/06/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [03/06/2025](departure_date)
+      - Đặt vé từ [TP.HCM](departure_city) đi [Bà Rịa – Vũng Tàu](arrival_city) ngày [04/06/2025](departure_date)
+
+      # Hỏi văn phong với ngày
+      - Có thể cho mình biết chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) không?
+      - Bạn có thể tìm chuyến bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [21/05/2025](departure_date) có được không?
+      - Bạn có thể tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [22/05/2025](departure_date) có được không?
+      - Mình muốn tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [23/05/2025](departure_date)
+      - Mình cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [24/05/2025](departure_date)
+      - Mình cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [25/05/2025](departure_date)
+      - Mình cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [26/05/2025](departure_date)
+      - Hiện tại tui cần tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [27/05/2025](departure_date) gấp
+      - Hiên tại tui cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [28/05/2025](departure_date) gấp
+      - Bạn có thể giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Hà Nội](arrival_city) ngày [29/05/2025](departure_date) không?
+      - Bạn có thể giúp mình tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngày [30/05/2025](departure_date) không?
+      - Mình đang cần tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [TP.HCM](arrival_city) ngay [31/05/2025](departure_date)
+      - Mình cần tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [01/06/2025](departure_date)
+      - Mình cần tìm chuyến bay từ [Bà Rịa – Vũng Tàu](departure_city) đến [Hà Nội](arrival_city) ngày [02/06/2025](departure_date) nhanh chóng
+      - Mình cần tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [03/06/2025](departure_date)
+      - Hãy giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [04/06/2025](departure_date)
+      - Hãy giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [05/06/2025](departure_date)
+
   - intent: nlu_fallback
     examples: |
       # Vietnamese nonsensical input
@@ -132,61 +385,3 @@ nlu:
       - testing fallback
       - test
       - ???!!!???
-
-  - intent: search_flight
-    examples: |
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) cho [2](number_adults) người lớn, [1](number_children) trẻ em, hạng [phổ thông](ticket_class)
-      - Đặt vé máy bay từ [Đà Nẵng](departure_city) đi [Hà Nội](arrival_city) ngày [20/05/2025](departure_date) cho [3](number_adults) người lớn, [2](number_children) trẻ em, [1](number_infants) em bé, hạng [thương gia](ticket_class)
-      - Tôi muốn mua vé từ [Hồ Chí Minh](departure_city) đến [Nha Trang](arrival_city) ngày [21/05/2025](departure_date) cho [1](number_adults) người lớn, hạng [hạng nhất](ticket_class)
-      - Cho tôi [4](number_adults) vé người lớn, [2](number_children) trẻ em từ [Hà Nội](departure_city) đi [Đà Nẵng](arrival_city) ngày [22/05/2025](departure_date), hạng [economy](ticket_class)
-      - Đặt vé hạng [business](ticket_class) từ [TP.HCM](departure_city) đến [Đà Nẵng](arrival_city) ngày [23/05/2025](departure_date) cho [2](number_adults) người lớn
-      - Tôi cần [1](number_adults) vé người lớn, [1](number_children) trẻ em, [1](number_infants) em bé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [24/05/2025](departure_date), hạng [first class](ticket_class)
-      - Có chuyến bay nào từ [Đà Nẵng](departure_city) đến [Hà Nội](arrival_city) ngày [25/05/2025](departure_date) cho [2](number_adults) người lớn, hạng [phổ thông](ticket_class) không?
-      - Tôi muốn đặt vé máy bay từ [Nha Trang](departure_city) đi [Hồ Chí Minh](arrival_city) ngày [26/05/2025](departure_date) cho [1](number_adults) người lớn, [2](number_children) trẻ em, hạng [thương gia](ticket_class)
-      - Đặt vé từ [Hà Nội](departure_city) đến [Đà Nẵng](arrival_city) ngày [27/05/2025](departure_date) cho [3](number_adults) người lớn, hạng [economy](ticket_class)
-      - Cho tôi vé máy bay hạng [phổ thông](ticket_class) từ [TP.HCM](departure_city) đi [Hà Nội](arrival_city) ngày [28/05/2025](departure_date) cho [2](number_adults) người lớn, [1](number_children) trẻ em
-      - Tôi muốn mua vé từ [Đà Nẵng](departure_city) đến [Nha Trang](arrival_city) ngày [29/05/2025](departure_date) cho [1](number_adults) người lớn, hạng [thương gia](ticket_class)
-      - Đặt vé máy bay từ [Hà Nội](departure_city) đi [TP.HCM](arrival_city) ngày [30/05/2025](departure_date) cho [2](number_adults) người lớn, [2](number_children) trẻ em, [1](number_infants) em bé, hạng [first class](ticket_class)
-      - Tôi cần [2](number_adults) vé người lớn từ [Hà Nội](departure_city) đến [Đà Nẵng](arrival_city) ngày [31/05/2025](departure_date), hạng [business](ticket_class)
-      - Đặt vé từ [TP.HCM](departure_city) đi [Nha Trang](arrival_city) ngày [01/06/2025](departure_date) cho [1](number_adults) người lớn, hạng [phổ thông](ticket_class)
-      - Cho tôi [3](number_adults) vé người lớn, [1](number_children) trẻ em từ [Đà Nẵng](departure_city) đến [Hà Nội](arrival_city) ngày [02/06/2025](departure_date), hạng [economy](ticket_class)
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) cho [2](number_adults) người lớn, [1](number_children) trẻ em, hạng [phổ thông](ticket_class)
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025] cho [2](number_adults) người lớn, [1](number_children) trẻ em, hạng [phổ thông](ticket_class)
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date)
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city)
-      - Tìm chuyến bay từ [Hà Nội](departure_city)
-      - Đặt vé máy bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) cho [2](number_adults) người lớn, [1](number_children) trẻ em, hạng [phổ thông](ticket_class)
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) cho [1](number_children) trẻ em, [2](number_adults) người lớn
-      - Đặt vé máy bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) cho [1](number_children) trẻ em, [2](number_adults) người lớn
-      - Cho tôi [1](number_children) trẻ em, [2](number_adults) người lớn từ [Hà Nội](departure_city) đi [TP.HCM](arrival_city) ngày [20/05/2025]
-      - [1](number_children) trẻ em, [2](number_adults) người lớn từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025]
-      - Tìm chuyến bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) cho [1](number_children) trẻ em, [2](number_adults) người lớn, hạng [phổ thông](ticket_class)
-      - Đặt vé máy bay từ [Đà Nẵng](departure_city) đi [Hà Nội](arrival_city) ngày [20/05/2025](departure_date) cho [3](number_adults) người lớn, [2](number_children) trẻ em, [1](number_infants) em bé, hạng [thương gia](ticket_class)
-      - Đặt vé máy bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) cho [2](number_adults) người lớn, [1](number_children) trẻ em, hạng [phổ thông](ticket_class)
-      - Đặt vé máy bay từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [20/05/2025](departure_date) cho [1](number_children) trẻ em, [2](number_adults) người lớn, hạng [phổ thông](ticket_class)
-      - Tôi muốn mua vé từ [Đà Nẵng](departure_city) đến [Nha Trang](arrival_city) ngày [29/05/2025](departure_date) cho [1](number_adults) người lớn, hạng [thương gia](ticket_class)
-      - Cho tôi [4](number_adults) vé người lớn, [2](number_children) trẻ em từ [Hà Nội](departure_city) đi [Đà Nẵng](arrival_city) ngày [22/05/2025](departure_date), hạng [economy](ticket_class)
-      - Tôi cần [1](number_adults) vé người lớn, [1](number_children) trẻ em, [1](number_infants) em bé từ [Hà Nội](departure_city) đến [TP.HCM](arrival_city) ngày [24/05/2025](departure_date), hạng [first class](ticket_class)
-      - [2](number_adults) người lớn
-      - [1](number_children) trẻ em
-      - [1](number_infants) em bé
-
-  - intent: inform
-    examples: |
-      - [1](number_children) trẻ em
-      - [2](number_adults) người lớn
-      - [1](number_infants) em bé
-      - [2](number_children)
-      - [3](number_adults)
-      - [1](number_children)
-      - [1](number_adults)
-      - [2](number_infants)
-      - [phổ thông](ticket_class)
-      - [thương gia](ticket_class)
-      - [first class](ticket_class)
-      - [economy](ticket_class)
-      - [business](ticket_class)
-      - [hạng nhất](ticket_class)
-      - [20/05/2025](departure_date)
-      - [Hà Nội](departure_city)
-      - [TP.HCM](arrival_city)
