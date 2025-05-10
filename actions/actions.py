@@ -27,7 +27,6 @@ class ActionSearchFlight(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Retrieve slots
         dep_city = tracker.get_slot("departure_city")
         arr_city = tracker.get_slot("arrival_city")
         dep_date = tracker.get_slot("departure_date")
@@ -36,33 +35,9 @@ class ActionSearchFlight(Action):
         children = tracker.get_slot("number_children")
         infants = tracker.get_slot("number_infants")
 
-        print(f"Departure City: {dep_city}, Arrival City: {arr_city}, Departure Date: {dep_date}, number of Adults: {adults}, Number of Children: {children}, Number of Infants: {infants}")
+        print(f"Departure City: {dep_city}, Arrival City: {arr_city}, Departure Date: {dep_date}, "
+              f"Ticket Class: {ticket_class}, Adults: {adults}, Children: {children}, Infants: {infants}")
 
-        # Validate city codes
-        dep_code = CITY_TO_AIRPORT.get(dep_city.lower(), None) if dep_city else None
-        arr_code = CITY_TO_AIRPORT.get(arr_city.lower(), None) if arr_city else None
-        if not dep_code:
-            dispatcher.utter_message(response="utter_ask_departure_city")
-            return []
-        if not arr_code:
-            dispatcher.utter_message(response="utter_ask_arrival_city")
-            return []
-        if not dep_date:
-            dispatcher.utter_message(response="utter_ask_departure_date")
-            return []
-        if not ticket_class:
-            dispatcher.utter_message(response="utter_ask_ticket_class")
-            return []
-        if not adults:
-            dispatcher.utter_message(response="utter_ask_number_adults")
-            return []
-        if not children:
-            dispatcher.utter_message(response="utter_ask_number_children")
-            return []
-        if not infants:
-            dispatcher.utter_message(response="utter_ask_number_infants")
-            return []
-        
         # Validate date format
         try:
             from datetime import datetime
@@ -70,7 +45,10 @@ class ActionSearchFlight(Action):
         except ValueError:
             dispatcher.utter_message(text="Ngày khởi hành không hợp lệ. Vui lòng nhập lại.")
             return []
-        
+
+        # Validate city codes
+        dep_code = CITY_TO_AIRPORT.get(dep_city.lower(), None) if dep_city else None
+        arr_code = CITY_TO_AIRPORT.get(arr_city.lower(), None) if arr_city else None
 
         # Prepare API request
         url = "https://api.dcwizard.net/flight_api/flight/search_flight/"

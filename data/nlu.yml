@@ -94,138 +94,6 @@ nlu:
       - please help me
       - help me please
 
-  - lookup: departure_city
-    examples: |
-      - Hà Nội
-      - TP Hồ Chí Minh
-      - Hải Phòng
-      - Đà Nẵng
-      - Cần Thơ
-      - An Giang
-      - Bà Rịa - Vũng Tàu
-      - Bắc Giang
-      - Bắc Kạn
-      - Bạc Liêu
-      - Bắc Ninh
-      - Bến Tre
-      - Bình Định
-      - Bình Dương
-      - Bình Phước
-      - Bình Thuận
-      - Cà Mau
-      - Cao Bằng
-      - Đắk Lắk
-      - Đắk Nông
-      - Điện Biên
-      - Đồng Nai
-      - Đồng Tháp
-      - Gia Lai
-      - Hà Giang
-      - Hà Nam
-      - Hà Tĩnh
-      - Hải Dương
-      - Hậu Giang
-      - Hòa Bình
-      - Hưng Yên
-      - Khánh Hòa
-      - Kiên Giang
-      - Kon Tum
-      - Lai Châu
-      - Lâm Đồng
-      - Lạng Sơn
-      - Lào Cai
-      - Long An
-      - Nam Định
-      - Nghệ An
-      - Ninh Bình
-      - Ninh Thuận
-      - Phú Thọ
-      - Phú Yên
-      - Quảng Bình
-      - Quảng Nam
-      - Quảng Ngãi
-      - Quảng Ninh
-      - Quảng Trị
-      - Sóc Trăng
-      - Sơn La
-      - Tây Ninh
-      - Thái Bình
-      - Thái Nguyên
-      - Thanh Hóa
-      - Thừa Thiên Huế
-      - Tiền Giang
-      - Trà Vinh
-      - Tuyên Quang
-      - Vĩnh Long
-      - Vĩnh Phúc
-      - Yên Bái
-
-  - lookup: arrival_city
-    examples: |
-      - Hà Nội
-      - TP Hồ Chí Minh
-      - Hải Phòng
-      - Đà Nẵng
-      - Cần Thơ
-      - An Giang
-      - Bà Rịa - Vũng Tàu
-      - Bắc Giang
-      - Bắc Kạn
-      - Bạc Liêu
-      - Bắc Ninh
-      - Bến Tre
-      - Bình Định
-      - Bình Dương
-      - Bình Phước
-      - Bình Thuận
-      - Cà Mau
-      - Cao Bằng
-      - Đắk Lắk
-      - Đắk Nông
-      - Điện Biên
-      - Đồng Nai
-      - Đồng Tháp
-      - Gia Lai
-      - Hà Giang
-      - Hà Nam
-      - Hà Tĩnh
-      - Hải Dương
-      - Hậu Giang
-      - Hòa Bình
-      - Hưng Yên
-      - Khánh Hòa
-      - Kiên Giang
-      - Kon Tum
-      - Lai Châu
-      - Lâm Đồng
-      - Lạng Sơn
-      - Lào Cai
-      - Long An
-      - Nam Định
-      - Nghệ An
-      - Ninh Bình
-      - Ninh Thuận
-      - Phú Thọ
-      - Phú Yên
-      - Quảng Bình
-      - Quảng Nam
-      - Quảng Ngãi
-      - Quảng Ninh
-      - Quảng Trị
-      - Sóc Trăng
-      - Sơn La
-      - Tây Ninh
-      - Thái Bình
-      - Thái Nguyên
-      - Thanh Hóa
-      - Thừa Thiên Huế
-      - Tiền Giang
-      - Trà Vinh
-      - Tuyên Quang
-      - Vĩnh Long
-      - Vĩnh Phúc
-      - Yên Bái
-
   - intent: search_flight
     examples: |
       # Hỏi cơ bản
@@ -347,6 +215,50 @@ nlu:
       - Hãy giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [04/06/2025](departure_date)
       - Hãy giúp mình tìm chuyến bay từ [TP.HCM](departure_city) đến [Bà Rịa – Vũng Tàu](arrival_city) ngày [05/06/2025](departure_date)
 
+  - intent: inform_departure_city
+    examples: |
+      - hà nội
+      - Hà Nội
+      - Tôi muốn đi từ [Hà Nội](departure_city)
+      - Đi từ [hà nội](departure_city)
+
+  - intent: inform_arrival_city
+    examples: |
+      - Đến Nha Trang
+      - Tôi muốn đến Hà Nội
+
+  - intent: inform_departure_date
+    examples: |
+      - Ngày mai
+      - 20/05/2025
+      - Tôi muốn đi ngày 15 tháng 6
+      - Đi vào ngày 1/7
+
+  - intent: inform_ticket_class
+    examples: |
+      - hạng phổ thông
+      - hạng thương gia
+      - vé business
+      - vé economy
+
+  - intent: inform_number_adults
+    examples: |
+      - 2 người lớn
+      - 1 người lớn
+      - cho 3 người lớn
+
+  - intent: inform_number_children
+    examples: |
+      - 1 trẻ em
+      - 2 bé
+      - không có trẻ em
+
+  - intent: inform_number_infants
+    examples: |
+      - 1 em bé
+      - 2 em bé
+      - không có em bé
+
   - intent: nlu_fallback
     examples: |
       # Vietnamese nonsensical input
@@ -385,3 +297,31 @@ nlu:
       - testing fallback
       - test
       - ???!!!???
+
+  - intent: offensive_language
+    examples: |
+      - đồ ngu
+      - mày bị điên à
+      - cút mẹ mày đi
+      - thằng chó
+      - đmm
+      - địt mẹ mày
+      - con cặc
+      - vãi l*n
+      - mày là thằng óc chó
+      - mẹ mày chết à
+      - mày có não không
+      - mày ngu như bò
+      - mày điên à
+      - mày là thằng điên
+      - tao
+      - mày
+      - nhỏ
+      - ngu
+      - điên
+      - chó
+      - cặc
+      - l*n
+      - chết tiệt
+      - chết mẹ
+      - chết

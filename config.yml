@@ -14,10 +14,10 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 500
+    epochs: 200
   - name: EntitySynonymMapper
   - name: ResponseSelector
-    epochs: 500
+    epochs: 200
   - name: FallbackClassifier
     threshold: 0.5
     ambiguity_threshold: 0.2

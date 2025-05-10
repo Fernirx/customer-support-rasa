@@ -9,6 +9,7 @@ intents:
   - ask_help_en
   - nlu_fallback  # Thêm intent fallback để xử lý khi bot không hiểu
   - search_flight
+  - offensive_language
 
 entities:
   - number_children
@@ -18,6 +19,17 @@ entities:
   - departure_date
   - departure_city
   - arrival_city
+
+forms:
+  flight_search_form:
+    required_slots:
+      - departure_city
+      - arrival_city
+      - departure_date
+      - ticket_class
+      - number_adults
+      - number_children
+      - number_infants
 
 slots:
   departure_city:
@@ -40,30 +52,21 @@ slots:
     mappings:
       - type: from_entity
         entity: ticket_class
-      - type: from_intent
-        intent: search_flight
-        value: "economy"
   number_adults:
-    type: float
+    type: text
     mappings:
       - type: from_entity
         entity: number_adults
-      - type: from_entity
-        entity: number
   number_children:
-    type: float
+    type: text
     mappings:
       - type: from_entity
         entity: number_children
-      - type: from_entity
-        entity: number
   number_infants:
-    type: float
+    type: text
     mappings:
       - type: from_entity
         entity: number_infants
-      - type: from_entity
-        entity: number
 
 responses:
   utter_greet_vi:
@@ -90,17 +93,19 @@ responses:
   utter_ask_arrival_city:
     - text: "Bạn muốn đến thành phố nào?"
   utter_ask_departure_date:
-    - text: "Bạn muốn đi vào ngày nào?"
+    - text: "Bạn muốn đi ngày nào?"
   utter_ask_ticket_class:
-    - text: "Bạn muốn hạng vé nào? (phổ thông/economy, thương gia/business, hạng nhất/first class)"
+    - text: "Bạn muốn chọn hạng vé nào?"
   utter_ask_number_adults:
-    - text: "Bao nhiêu người lớn?"
+    - text: "Có bao nhiêu người lớn?"
   utter_ask_number_children:
-    - text: "Bao nhiêu trẻ em?"
+    - text: "Có bao nhiêu trẻ em?"
   utter_ask_number_infants:
-    - text: "Bao nhiêu em bé?"
+    - text: "Có bao nhiêu em bé?"
   utter_flight_result:
     - text: "{flight_info}"
+  utter_please_be_civil:
+    - text: "Mong bạn văn minh."
 
 actions:
   - action_search_flight

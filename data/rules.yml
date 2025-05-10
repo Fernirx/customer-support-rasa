@@ -36,7 +36,13 @@ rules:
       - intent: nlu_fallback
       - action: utter_default_fallback
 
-  - rule: Flight search
+  - rule: Tìm chuyến bay
     steps:
       - intent: search_flight
-      - action: action_search_flight
+      - action: flight_search_form
+      - active_loop: flight_search_form
+
+  - rule: Respond to offensive language
+    steps:
+      - intent: offensive_language
+      - action: utter_please_be_civil
